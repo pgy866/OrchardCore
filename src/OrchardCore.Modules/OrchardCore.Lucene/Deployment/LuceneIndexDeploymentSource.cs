@@ -17,6 +17,8 @@ namespace OrchardCore.Lucene.Deployment
             _siteService = siteService;
         }
 
+        public int Order { get; }
+
         public Task ProcessDeploymentStepAsync(DeploymentStep step, DeploymentPlanResult result)
         {
             var luceneIndexStep = step as LuceneIndexDeploymentStep;
